@@ -13,9 +13,9 @@ class PostController extends Controller
     public function index() {
 
         if(request()->page){
-            $key = 'http://127.0.0.1:8000/'.request()->page;
+            $key = url('/') . '/' .request()->page;
         }else{
-            $key = 'http://127.0.0.1:8000/';
+            $key = url('/');
         }
         if (Cache::has($key)) {
             $posts = Cache::get($key);

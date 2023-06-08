@@ -19,7 +19,7 @@ class PostObserver
     public function deleting(Post $post)
     {
         if($post->image){
-            Storage::delete("http://127.0.0.1:8000/storage/".$post->image->url);
+            Storage::delete($post->image->url);
         }
     }
 

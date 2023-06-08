@@ -15,7 +15,7 @@
                 <figure>
                     @if ($post->image)
                         <img class="w-full h-80 object-cover object-center"
-                            src="http://127.0.0.1:8000/storage/{{ $post->image->url }}" alt="{{ $post->name }}">
+                        src="{{ asset('storage/' . $post->image->url) }}" alt="{{ $post->name }}">
                     @else
                         <img class="w-full h-80 object-cover object-center"
                             src="https://th.bing.com/th/id/R.b44b129dd93f41fd15e95032ded972d6?rik=3c445xi4nOcN%2bw&riu=http%3a%2f%2fk30.kn3.net%2ftaringa%2f8%2f3%2f9%2fB%2f7%2f2%2fluismi222222%2fD28.jpg&ehk=n5xYmu%2bPejImNc7k%2baupiZE4NpesYm3OiVivWQJZQ3Q%3d&risl=&pid=ImgRaw&r=0"
@@ -35,7 +35,7 @@
                             <a class="flex" href="{{ route('posts.show', $similar) }}">
                                 @if ($post->image)
                                     <img class="w-full h-80 object-cover object-center"
-                                        src="http://127.0.0.1:8000/storage/{{ $similar->image->url }}"
+                                        src="{{ asset('storage/'.$similar->image->url) }}"
                                         alt="{{ $post->name }}">
                                 @else
                                     <img class="w-full h-80 object-cover object-center"

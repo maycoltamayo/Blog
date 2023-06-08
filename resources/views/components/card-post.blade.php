@@ -1,7 +1,7 @@
 @props(['post'])
 <article class="mb-8 bg-white shadow-lg rounded-lg overflow-hidden mt-3">
     @if ($post->image)
-        <img class="w-full h-80 object-cover object-center" src="http://127.0.0.1:8000/storage/{{ $post->image->url }}"
+        <img class="w-full h-80 object-cover object-center"  src="{{ asset('storage/' . $post->image->url) }}"
             alt="{{ $post->name }}">
     @else
         <img class="w-full h-80 object-cover object-center"
